@@ -1,0 +1,38 @@
+.navbar {
+  position: fixed; /* Membuat navbar menempel di layar */
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between; /* Mendorong logo ke kiri dan menu ke kanan */
+  align-items: center;
+  background-color: rgba(26, 26, 26, 0.8); /* Warna semi-transparan */
+  backdrop-filter: blur(10px); /* Efek blur pada latar belakang */
+  z-index: 1000; /* Memastikan navbar selalu di paling depan */
+  transition: top 0.3s;
+}
+
+.nav-logo {
+  color: white;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px; /* Jarak antar item menu */
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #007bff;
+}
