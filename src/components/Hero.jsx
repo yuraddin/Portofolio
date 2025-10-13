@@ -26,14 +26,14 @@ const Hero = () => {
           {/* Sosial Media */}
           <div className="social-icons">
             <a 
-              href="https://instagram.com/username_ig_anda" 
+              href="https://www.instagram.com/__yrdn/" 
               target="_blank" 
               rel="noopener noreferrer"
             >
               <FiInstagram />
             </a>
             <a 
-              href="https://linkedin.com/in/username_linkedin_anda" 
+              href="https://www.linkedin.com/in/yuraddin-b0302b2aa/" 
               target="_blank" 
               rel="noopener noreferrer"
             >
