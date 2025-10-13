@@ -1,6 +1,6 @@
 import React from 'react';
 import './About.css';
-import aboutImage from '../assets/About.png'; // Impor gambar baru Anda
+import aboutImage from '../assets/Profil.png'; // Impor gambar baru Anda
 
 const About = () => {
   return (

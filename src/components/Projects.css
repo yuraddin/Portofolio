@@ -1,25 +1,13 @@
-/* Gaya umum halaman */
+/* Mengatur agar konten di tengah halaman secara vertikal dan horizontal */
 .page-container {
   min-height: 100vh;
   padding: 120px 10%;
   display: flex;
-  flex-direction: column; /* Diperbaiki: Mengatur susunan jadi vertikal */
-  align-items: center;
-  justify-content: flex-start; /* Diperbaiki: Memulai konten dari atas */
-  background: linear-gradient(135deg, #0f172a, #1e293b, #0c1a2e);
-  color: white;
+  align-items: center;      /* Menengahkan secara horizontal */
+  justify-content: center;  /* Menengahkan secara vertikal */
+  text-align: center;
 }
 
-/* Gaya judul yang sudah diperbaiki */
-.page-title {
-  font-size: 3.5rem;
-  font-weight: 900;
-  font-family: serif;
-  margin-bottom: 50px;
-  text-align: center;
-  position: relative;
-  display: inline-block;
-}
 
 .page-title::after {
   content: '';
@@ -33,70 +21,17 @@
   border-radius: 2px;
 }
 
-/* Gaya spesifik untuk grid dan kartu proyek */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.project-card {
-  background-color: #1e293b;
-  border: 1px solid #334155;
-  border-radius: 15px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
-}
-
-.project-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.card-content {
-  padding: 25px;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-.card-content h3 {
-  font-size: 1.7rem;
+/* Gaya untuk tulisan "Coming Soon" */
+.coming-soon-text {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 50%;
   margin-bottom: 15px;
 }
 
-.card-content p {
-  font-size: 1rem;
+.coming-soon-subtext {
+  font-size: 1.2rem;
   color: #cbd5e1;
-  line-height: 1.6;
-  margin-bottom: 25px;
-  flex-grow: 1;
-}
-
-/* Gaya tombol yang konsisten */
-.btn.btn-primary {
-  padding: 12px 25px;
-  background-color: #0ea5e9;
-  color: white;
-  text-decoration: none;
-  border-radius: 50px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-  text-align: center;
-  align-self: flex-start;
-}
-
-.btn.btn-primary:hover {
-  background-color: #0284c7;
+  max-width: 450px;
 }
