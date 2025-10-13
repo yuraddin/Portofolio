@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from './App.jsx'
-import Hero from './components/hero.jsx';
+import Utama from './components/Utama.jsx'; // DIUBAH: Mengimpor komponen baru
 import About from './components/About.jsx';
 import Projects from './components/Projects.jsx';
 import Contact from './components/Contact.jsx';
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Hero />, // Halaman utama akan menampilkan komponen Hero
+        element: <Utama />, // DIUBAH: Menggunakan komponen baru
       },
       {
         path: "about",

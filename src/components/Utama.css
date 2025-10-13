@@ -1,24 +1,25 @@
-.hero-container {
+/* Mengganti nama kelas utama dari .hero-container menjadi .utama-container */
+.utama-container {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 10%;
   min-height: 100vh;
-  /* DIKEMBALIKAN: Latar belakang gradasi solid untuk memperbaiki tampilan */
-  background: linear-gradient(135deg, #0f172a, #1e293b, #0c1a2e);
   color: white;
   overflow: hidden;
+  /* Latar belakang gradasi bergerak yang sudah berfungsi */
   background: linear-gradient(-45deg, #0f172a, #1e293b, #0c1a2e, #22d3ee);
   background-size: 400% 400%;
   animation: gradientAnimation 15s ease infinite;
 }
 
-.hero-content {
+/* Mengganti nama kelas konten */
+.utama-content {
   flex: 1;
   max-width: 600px;
 }
 
-.hero-subtitle {
+.utama-subtitle {
   font-size: 1rem;
   font-weight: bold;
   letter-spacing: 2px;
@@ -26,19 +27,20 @@
   color: #94a3b8;
 }
 
-.hero-title {
+.utama-title {
   font-size: 4rem;
   font-weight: 900;
   margin-bottom: 20px;
   line-height: 1.2;
 }
 
-.hero-description {
+.utama-description {
   font-size: 1.1rem;
   color: #cbd5e1;
   margin-bottom: 30px;
 }
 
+/* KELAS DI BAWAH INI TIDAK PERLU DIUBAH KARENA DI JSX MASIH SAMA */
 .hero-buttons {
   display: flex;
   align-items: center;
@@ -82,7 +84,13 @@
   background-color: #0ea5e9;
 }
 
-.hero-image {
+.social-icons a svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Mengganti nama kelas gambar */
+.utama-image {
   flex: 1;
   position: relative;
   display: flex;
@@ -90,12 +98,12 @@
   align-items: center;
 }
 
-.hero-image img {
+.utama-image img {
   max-width: 450px;
-  border-radius: 20px;
   z-index: 2;
 }
 
+/* Elemen Dekoratif (tidak perlu diubah) */
 .decorative-sphere {
   position: absolute;
   border-radius: 50%;
@@ -116,9 +124,4 @@
   height: 70px;
   bottom: 25%;
   left: 10%;
-}
-
-.social-icons a svg {
-  width: 24px;
-  height: 24px;
 }

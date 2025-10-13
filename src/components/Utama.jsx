@@ -1,29 +1,29 @@
 import React from 'react';
-import './Hero.css';
-import fotoProfil from '../assets/Profil.png';
-import { FiInstagram, FiLinkedin, FiDownload } from 'react-icons/fi'; 
+import './Utama.css'; // Menggunakan file CSS yang baru
+import fotoProfil from '../assets/Profil.png'; // Pastikan nama file foto/logo Anda benar
+import { FiInstagram, FiLinkedin, FiDownload } from 'react-icons/fi';
 
-const Hero = () => {
+// Nama komponen diubah dari Hero menjadi Utama
+const Utama = () => { 
   return (
-    <section className="hero-container">
-      <div className="hero-content">
-        <p className="hero-subtitle">YURADDIN</p>
-        <h1 className="hero-title">
+    // className diubah agar konsisten
+    <section className="utama-container">
+      <div className="utama-content">
+        <p className="utama-subtitle">YURADDIN</p>
+        <h1 className="utama-title">
           HAYY<br />
           I'M YURADDIN
         </h1>
-        <p className="hero-description">
+        <p className="utama-description">
           Mahasiswa Program Studi Teknik Komputer yang Memiliki Minat Besar Pada AI dan Machine Learning Serta Berpengalaman dalam Pengembangan Web dan Aplikasi Mobile.
         </p>
 
+        {/* Bagian tombol ini bisa tetap menggunakan className lama agar tidak perlu mengubah CSS-nya */}
         <div className="hero-buttons">
-          {/* Download CV */}
           <a href="/CV.pdf" className="btn btn-primary" download="Yuraddin_CV.pdf">
             <FiDownload style={{ marginRight: '8px' }} />
             Download CV
           </a>
-
-          {/* Sosial Media */}
           <div className="social-icons">
             <a 
               href="https://www.instagram.com/__yrdn/" 
@@ -43,7 +43,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="hero-image">
+      <div className="utama-image">
         <img src={fotoProfil} alt="Foto Profil" />
         <div className="decorative-sphere sphere1"></div>
         <div className="decorative-sphere sphere2"></div>
@@ -52,4 +52,5 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+// Pastikan export juga diubah
+export default Utama;
