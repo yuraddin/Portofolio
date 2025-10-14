@@ -1,13 +1,14 @@
 import { Outlet } from 'react-router-dom';
-// DIUBAH: 'navbar' menjadi 'Navbar' agar konsisten
-import Navbar from './components/navbar'; 
+// 1. Anda sudah benar mengimpor Navigasi
+import Navigasi from './components/Navigasi'; 
 import Footer from './components/Footer';
 import './App.css';
 
 function App() {
   return (
     <div>
-      <Navbar />
+      {/* 2. Gunakan nama yang sama di sini */}
+      <Navigasi /> 
       <main>
         <Outlet />
       </main>
