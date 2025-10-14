@@ -56,3 +56,19 @@
   line-height: 1.7;
   margin-bottom: 20px;
 }
+
+/* Aturan untuk layar kecil (Mobile) */
+@media (max-width: 768px) {
+  .about-content-wrapper {
+    flex-direction: column; /* Menumpuk gambar dan teks */
+  }
+
+  .page-title {
+    font-size: 2.5rem; /* Mengecilkan ukuran judul */
+  }
+
+  /* Rata kiri lebih mudah dibaca di HP daripada rata kiri-kanan */
+  .about-text p {
+    text-align: left; 
+  }
+}

@@ -84,3 +84,22 @@
   width: 32px;
   height: 32px;
 }
+
+/* Aturan untuk layar kecil (Mobile) */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px; /* Mengurangi jarak tepi */
+  }
+
+  .nav-logo {
+    font-size: 1.5rem; /* Mengecilkan logo */
+  }
+
+  .nav-menu {
+    gap: 15px; /* Mengurangi jarak antar menu */
+  }
+
+  .nav-menu a {
+    font-size: 1rem;
+  }
+}

@@ -125,3 +125,26 @@
   bottom: 25%;
   left: 10%;
 }
+
+/* Aturan untuk layar kecil (Mobile) */
+@media (max-width: 768px) {
+  .utama-container {
+    /* Mengubah susunan dari berdampingan menjadi atas-bawah */
+    flex-direction: column; 
+    padding: 80px 5%; /* Mengurangi jarak tepi */
+    text-align: center;
+  }
+
+  .utama-content, .utama-image {
+    max-width: 100%; /* Memastikan konten mengisi lebar layar */
+  }
+
+  .utama-title {
+    font-size: 2.5rem; /* Mengecilkan ukuran judul */
+  }
+
+  .hero-buttons {
+    flex-direction: column; /* Menumpuk tombol ke bawah */
+    gap: 15px;
+  }
+}

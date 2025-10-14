@@ -1,5 +1,6 @@
-import { Outlet } from 'react-router-dom'; // Impor Outlet
-import Navbar from './components/navbar';
+import { Outlet } from 'react-router-dom';
+// DIUBAH: 'navbar' menjadi 'Navbar' agar konsisten
+import Navbar from './components/navbar'; 
 import Footer from './components/Footer';
 import './App.css';
 
@@ -8,7 +9,7 @@ function App() {
     <div>
       <Navbar />
       <main>
-        <Outlet /> {/* Outlet adalah tempat konten halaman (Hero, About, dll.) akan dirender */}
+        <Outlet />
       </main>
       <Footer />
     </div>
