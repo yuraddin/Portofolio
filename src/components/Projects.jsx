@@ -47,26 +47,35 @@ const Projects = () => {
                 className="project-card"
                 whileHover={{ y: -10 }}
                 transition={{ type: 'spring', stiffness: 300 }}
+                /* Tambahan inline style untuk menggaransi kartu sama tinggi jika CSS gagal */
+                style={{ display: 'flex', flexDirection: 'column', height: '100%' }}
               >
                 <div className="project-image-placeholder" style={{ padding: 0, overflow: 'hidden' }}>
                   {proyek.img_url ? (
                     <img 
                       src={proyek.img_url} 
                       alt={proyek.title} 
-                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                      /* display: block ditambahkan agar flexbox container tidak mengecilkan gambar */
+                      style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
                     />
                   ) : (
                     <span>Tanpa Gambar</span>
                   )}
                 </div>
-                <h3>{proyek.title}</h3>
-                <p>{proyek.deskripsi}</p>
                 
-                {proyek.project_link && (
-                  <a href={proyek.project_link} target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ display: 'inline-block', fontSize: '0.9rem', padding: '8px 16px', marginTop: '10px' }}>
-                    Lihat Proyek
-                  </a>
-                )}
+                {/* PEMBUNGKUS BARU: Ini yang akan mengatur teks agar rapi dan menekan tombol ke bawah */}
+                <div style={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+                  <h3>{proyek.title}</h3>
+                  <p style={{ flexGrow: 1 }}>{proyek.deskripsi}</p>
+                  
+                  {proyek.project_link && (
+                    <div style={{ marginTop: 'auto' }}>
+                      <a href={proyek.project_link} target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ display: 'inline-block', fontSize: '0.9rem', padding: '8px 16px', marginTop: '10px' }}>
+                        Lihat Proyek
+                      </a>
+                    </div>
+                  )}
+                </div>
               </motion.div>
             ))}
           </div>
