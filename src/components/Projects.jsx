@@ -47,7 +47,6 @@ const Projects = () => {
                 className="project-card"
                 whileHover={{ y: -10 }}
                 transition={{ type: 'spring', stiffness: 300 }}
-                /* Tambahan inline style untuk menggaransi kartu sama tinggi jika CSS gagal */
                 style={{ display: 'flex', flexDirection: 'column', height: '100%' }}
               >
                 <div className="project-image-placeholder" style={{ padding: 0, overflow: 'hidden' }}>
@@ -55,7 +54,6 @@ const Projects = () => {
                     <img 
                       src={proyek.img_url} 
                       alt={proyek.title} 
-                      /* display: block ditambahkan agar flexbox container tidak mengecilkan gambar */
                       style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
                     />
                   ) : (
@@ -63,7 +61,6 @@ const Projects = () => {
                   )}
                 </div>
                 
-                {/* PEMBUNGKUS BARU: Ini yang akan mengatur teks agar rapi dan menekan tombol ke bawah */}
                 <div style={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                   <h3>{proyek.title}</h3>
                   <p style={{ flexGrow: 1 }}>{proyek.deskripsi}</p>
