@@ -546,4 +546,32 @@ html {
     font-size: 0.9rem; 
   }
 
-} /* <-- INI ADALAH KURUNG KURAWAL PENUTUP SUPER PENTING, JANGAN DIHAPUS */
+
+}
+
+#google_translate_element {
+  display: none !important;
+}
+
+/* 2. HANCURKAN BINGKAI PUTIH MELAYANG (Yang menutupi navigasimu) */
+iframe.skiptranslate,
+iframe.goog-te-banner-frame,
+.skiptranslate > iframe,
+div#goog-gt-tt {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  height: 0 !important;
+}
+
+/* 3. Hancurkan popup tooltip saat teks disorot */
+.VIpgJd-ZVi9od-aZ2wEe-wOHMyf,
+.VIpgJd-ZVi9od-ORHb-OEVmcd {
+  display: none !important;
+}
+
+/* 4. Jaga posisi website agar tidak bergeser sedikitpun */
+body {
+  top: 0px !important;
+}
