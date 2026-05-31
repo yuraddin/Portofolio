@@ -4,24 +4,30 @@ const Navigasi = () => {
   // State untuk melacak bahasa yang sedang aktif (default: ID)
   const [lang, setLang] = useState('ID');
 
-  // Fungsi untuk mengubah bahasa bolak-balik saat diklik (Sekarang jadi Remote Google)
+// Fungsi untuk mengubah bahasa (Versi Final Anti-Nyangkut)
   const toggleLanguage = () => {
-    // 1. Tentukan bahasa tujuan berikutnya
     const targetLang = lang === 'ID' ? 'EN' : 'ID';
-    const googleLangCode = targetLang === 'EN' ? 'en' : 'id';
-
-    // 2. Cari elemen dropdown Google Translate rahasia yang sudah kita sembunyikan
+    
+    // Cari elemen dropdown Google Translate rahasia
     const googleSelect = document.querySelector('.goog-te-combo');
     
     if (googleSelect) {
-      // 3. Ubah nilai dropdown Google tersebut
-      googleSelect.value = googleLangCode;
-      
-      // 4. Paksa Google untuk langsung menerjemahkan halaman saat itu juga
-      googleSelect.dispatchEvent(new Event('change'));
-      
-      // 5. Ubah state React agar tampilan warna tombol 'ID | EN' mu ikut berubah
-      setLang(targetLang);
+      if (targetLang === 'EN') {
+        // 1. Jika mau ke Inggris, suruh Google bekerja
+        googleSelect.value = 'en';
+        googleSelect.dispatchEvent(new Event('change'));
+        
+        // Ubah tampilan tombol menjadi EN
+        setLang(targetLang);
+      } else {
+        // 2. Jika kembali ke ID, HANCURKAN ingatan Google
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + window.location.hostname;
+        
+        // 3. Muat ulang (refresh) halaman secara instan untuk membersihkan sisa terjemahan robot.
+        // Karena ini React, state akan otomatis kembali ke 'ID' dan teks aslimu 100% kembali normal!
+        window.location.reload();
+      }
     } else {
       console.log("Mesin Google belum siap dimuat, coba klik lagi sebentar.");
     }
